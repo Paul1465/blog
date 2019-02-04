@@ -12,5 +12,8 @@
 <input type="password" placeholder="Password" name="password">
 <input type="submit" placeholder="Envoyer">
 </form>
+<?php if(isset($_GET ["message"])){
+    echo $_GET["message"];
+} ?>
 </body>
 </html>
