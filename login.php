@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,13 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-<form action="login_post.php" method="post">
-<input type="text" placeholder="Pseudo" name="pseudo">
-<input type="password" placeholder="Password" name="password">
-<input type="submit" placeholder="Envoyer">
-</form>
-<?php if(isset($_GET ["message"])){
-    echo $_GET["message"];
-} ?>
+    <?php require 'nav-bar.php'; ?>
+
+    <form action="login_post.php" method="post">
+        <input type="text" placeholder="pseudo" name="pseudo">
+        <input type="password" placeholder="password" name="password">
+        <input type="submit" value="Connexion">
+    </form>
+    <?php
+    if(isset($_GET["message"])){
+        echo $_GET["message"];
+    }
+    ?>
 </body>
 </html>

@@ -1,10 +1,10 @@
 <?php
 session_start();
-
 if(!isset($_SESSION["pseudo"])){
     header("Location: login.php");
 }
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,18 +13,9 @@ if(!isset($_SESSION["pseudo"])){
     <title>Document</title>
 </head>
 <body>
+    <?php require_once 'nav-bar.php'; ?>
 
-<nav>
-<a href="disconnect.php">Disconnect</a>
-</nav>
+    <h1>Admin</h1>
 
-<form action="login_post.php" method="post">
-<input type="text" placeholder="Pseudo" name="pseudo">
-<input type="password" placeholder="Password" name="password">
-<input type="submit" placeholder="Envoyer">
-</form>
-<?php if(isset($_GET ["message"])){
-    echo $_GET["message"];
-} ?>
 </body>
 </html>
